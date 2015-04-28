@@ -1,0 +1,27 @@
+---
+title: "Capstone_SWC"
+author: "Alli Cramer"
+date: "Tuesday, April 28, 2015"
+output: html_document
+---
+
+```{r, echo = FALSE, message = FALSE, warning =FALSE}
+#Data-Carpentry - Learning R Markdown 
+setwd("C:/Users/Alli/SkyDrive/Research/DataCarpentryWorkshop/swc_wsu")
+
+#loading the gapminder data 
+
+gapminder = read.csv("data/gapminder.csv")
+
+#load my functions 
+source("R/functions_swc.R")
+
+states = c("Norway", "Sweden", "Denmark")
+
+plot.country_year(states, data = gapminder)
+
+```
+
+
+All of the nordic countries expecienced an increase, with Norway having the sharpest increase in GDP. 
+
