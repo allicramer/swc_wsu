@@ -36,3 +36,23 @@ plot.country_year = function(states, data){
 }
 
 
+lifetable.year =  function(years, data = gapminder){
+  data %>% 
+  filter(year == years)%>%
+  group_by(continent)%>%
+  summarize(meanLife  = mean(lifeExp), 
+            minLife = min(lifeExp),
+            maxLife = max(lifeExp))
+}
+
+
+lifehist.year = function(years, data = gapminder){
+  data %>%
+  filter(year == years)%>%
+  ggplot(aes(x = lifeExp, fill = continent))+
+  geom_histogram( binwidth = 3.5, color = "black")
+}
+
+
+
+
