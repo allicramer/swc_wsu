@@ -25,3 +25,17 @@ plot.country_year(states, data = gapminder)
 
 All of the nordic countries expecienced an increase, with Norway having the sharpest increase in GDP. 
 
+```{r, echo = FALSE}
+
+lifetable.year(2007)
+
+```
+
+Africa has the lowest life expectancy while Oceania has the highest.
+
+```{r, echo = FALSE, message = FALSE, warning=FALSE}
+lifehist.year(2007)
+```
+
+Africa dominates the lower distribution of life expectancy.
+
